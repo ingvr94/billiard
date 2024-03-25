@@ -207,7 +207,8 @@ const Canvas = ({width,height}: CanvasProps) => {
                 const radius=Math.floor(Math.random()*20)+15
                 let x=Math.random()*(Number(width)-radius*2)+radius
                 let y=Math.random()*(Number(height)-radius*2)+radius
-                setCircleArray([...circleArray,new (Circle as any)(x,y,radius)])
+                circleArray.push(new (Circle as any)(x,y,radius) )
+                setCircleArray(circleArray)
             }
         }
 
